@@ -1,0 +1,123 @@
+
+
+ body {
+   display: flex;   
+   justify-content: center;
+
+ }
+
+ .Container {
+   background: rgb(216, 237, 100);
+   margin: 25px;
+   padding: 25px;
+   border-radius: 25px;
+ }
+
+ .title {
+   text-align: center;
+ }
+ .title span {
+   color: crimson;
+ }
+
+ .status-bar {
+   display: flex;
+   font-size: 25px;
+   margin-top: 25px;
+   justify-content: space-around ;
+ }
+
+ .reset {
+   cursor: pointer;
+ }
+
+ .reset:hover {
+   color: cornsilk;
+ }
+ 
+ .game-grid {
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3,1fr);
+   grid-gap: 10px;
+   background: blanchedalmond;
+   column-gap: 8px;
+   row-gap: 8px;
+   margin-top: 20px;
+   
+
+ }
+
+ .grid {
+   width: 150px;
+   height: 150px;
+   background: rgb(182, 190, 137);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 30px;
+   
+}
+
+.X,
+.O{
+  cursor: not-allowed;
+}
+.X::after {
+   content: 'X';
+   font-size: 110px;
+
+
+}
+
+.O::after {
+  content: 'O';
+  color: rgb(233, 22, 22);
+  font-size: 110px;
+}
+
+.player span{
+   color: rgb(233, 22, 22);
+   font-size: 30px;
+}
+
+.player div{
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  .grid {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 15px;
+  }
+  
+    .game-grid {
+      grid-gap: 4px;
+      margin-top: 8px;
+      column-gap: 4px;
+      row-gap: 4px;
+    }
+    .X::after {
+      font-size: 20px;
+     }
+   .O::after {
+    font-size: 20px;
+  }
+  .status-bar {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .player span{
+    font-size: 12px;
+ }
+ .player div{
+  font-size: 12px;
+}
+
+}
+
+
+
